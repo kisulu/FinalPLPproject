@@ -1,0 +1,15 @@
+# messaging/models.py
+import uuid
+from django.db import models
+from profiles.models import Profile
+from sessions.models import TutoringSession
+
+class Message(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    sender = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="sent_messages")
+    recipient = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="received_messages")
+    session = models.ForeignKey(TutoringSession, on_delete=models.SET_NULL, null=True, blank=True)
+    message = models.TextField()
+    is_read = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
