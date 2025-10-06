@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Assignments</h2>
+    <ul class="list-group">
+        {% comment "" %}{% for assignment in assignments %}
+        <li class="list-group-item">
+            <strong>{{ assignment.title }}</strong> - {{ assignment.subject.name }}
+            <br>
+            Budget: {{ assignment.budget_amount }} KES | Deadline: {{ assignment.deadline }}
+        </li>
+        {% empty %}
+        <li class="list-group-item">No assignments available.</li>
+        {% endfor %}{% endcomment %}
+        <li class="list-group-item">No assignments available.</li>
+    </ul>
+</div>
+{% endblock %}

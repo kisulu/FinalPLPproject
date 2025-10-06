@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Teachers</h2>
+    <div class="row">
+        {% comment %}{% for teacher in teachers %}
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-3">
+                <img src="{{ teacher.profile_image_url|default:'/static/img/default.png' }}" class="card-img-top" alt="{{ teacher.first_name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ teacher.first_name }} {{ teacher.last_name }}</h5>
+                    <p class="card-text">{{ teacher.bio|truncatewords:15 }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No teachers available yet.</p>
+        {% endfor %} {% endcomment %}
+        <p>No teachers available yet.</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Tutoring Sessions</h2>
+    <ul class="list-group">
+        {% comment %}{% for session in sessions %}
+        <li class="list-group-item">
+            <strong>{{ session.subject.name }}</strong> with {{ session.teacher.first_name }}
+            <br>
+            Date: {{ session.session_date }} | Status: {{ session.status }}
+        </li>
+        {% empty %}
+        <li class="list-group-item">No sessions scheduled yet.</li>
+        {% endfor %} {% endcomment %}
+        <li class="list-group-item">No sessions scheduled yet.</li>
+    </ul>
+</div>
+{% endblock %}

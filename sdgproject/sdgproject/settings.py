@@ -35,10 +35,17 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
+    'django.contrib.sessions',  # keep built-in
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'assignments',
+    'payments',
+    'profiles',
+    'messaging',
+    'reviews',
+    'subjects',
+     # 'tutoring',  # your renamed custom app
 ]
 
 MIDDLEWARE = [

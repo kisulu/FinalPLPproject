@@ -32,6 +32,9 @@ class TutoringSession(models.Model):
     meeting_link = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        app_label = 'sessions'
+
 
 class TeacherAvailability(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -40,4 +43,7 @@ class TeacherAvailability(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     is_available = models.BooleanField(default=True)
+
+    class Meta:
+        app_label = 'sessions'
 

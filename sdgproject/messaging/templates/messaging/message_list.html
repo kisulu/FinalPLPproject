@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Messages</h2>
+    <ul class="list-group">
+        {% comment %}{% for msg in messages %}
+        <li class="list-group-item {% if not msg.is_read %}fw-bold{% endif %}">
+            From: {{ msg.sender.first_name }} → To: {{ msg.recipient.first_name }}
+            <br>
+            {{ msg.message }}
+            <small class="text-muted">({{ msg.created_at }})</small>
+        </li>
+        {% empty %}
+        <li class="list-group-item">No messages yet.</li>
+        {% endfor %} {% endcomment %}
+        <li class="list-group-item">No messages yet.</li>
+    </ul>
+</div>
+{% endblock %}
